@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Carregador";
+}
+
+
+<div class="container">
+    <h2>Carregador</h2>
+
+
+    <div class="col-md-10">
+        @using (Html.BeginForm("Carregador", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <h4>Selecione o arquivo</h4>
+            <hr />
+            <div class="well well-sm col-md-6">
+                <input type="file" name="Arquivo" value=""  />
+
+            </div>
+            <div class="well well-sm col-md-6">
+                <input type="submit" name="Enviar" value="Enviar"  />
+            </div>
+        }
+        <h2>@ViewBag.Message</h2>
+    </div>
+</div>
